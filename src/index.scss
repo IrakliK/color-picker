@@ -1,0 +1,54 @@
+/* Extra Small (xsm) */
+$screen-sm-max: 600px;
+
+/* Small (sm) */
+$screen-sm-min: 600px;
+
+/* Medium (md) */
+$screen-md-min: 768px;
+
+/* Large (lg) */
+$screen-lg-min: 1024px;
+
+/* Extra Large (xl) */
+$screen-xl-min: 1280px;
+
+/* Two Extra Large (xxl) */
+$screen-xxl-min: 1536px;
+
+// Extra Small devices
+@mixin xsm {
+  @media only screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media only screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media only screen and  (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media only screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+html,
+body,
+#root {
+  font-family: monospace;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
