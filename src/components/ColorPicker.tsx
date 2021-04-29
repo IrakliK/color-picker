@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./ColorPicker.scss";
 
@@ -6,7 +6,7 @@ interface ColorProps {
   color: string;
 }
 /*
- TODO when changing view/frames button should go back to its previous state
+ TODO create another button to regenerate color
 */
 export const ColorPicker: FC<ColorProps> = (props: ColorProps) => {
   const COLOR = props.color.toUpperCase();
@@ -16,12 +16,6 @@ export const ColorPicker: FC<ColorProps> = (props: ColorProps) => {
   const handleCopy = () => {
     setIsCopied(true);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 3000);
-  }, [isCopied]);
 
   return (
     <div className="top">
@@ -33,6 +27,9 @@ export const ColorPicker: FC<ColorProps> = (props: ColorProps) => {
             <span>{isCopied ? "✅ " : "📋 "}</span>
           </button>
         </CopyToClipboard>
+        <div className={`message ${isCopied ? "visible" : ""}`}>
+          Copied Color to Clipboard !
+        </div>
       </div>
     </div>
   );
