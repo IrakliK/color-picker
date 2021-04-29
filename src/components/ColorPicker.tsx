@@ -26,7 +26,7 @@ export const ColorPicker: FC<ColorProps> = (props: ColorProps) => {
 
   return (
     <div className="top">
-      <div className="title" style={{ backgroundColor: props.color }}>
+      <div className="title" style={{ backgroundColor: COLOR }}>
         <h1>RANDOM COLOR PICKER</h1>
         <div className="hash">{COLOR}</div>
         <CopyToClipboard text={COLOR} onCopy={handleCopy}>
