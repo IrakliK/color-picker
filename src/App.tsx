@@ -1,12 +1,18 @@
 import "./App.scss";
 import { ColorPicker } from "./components/ColorPicker";
-
 import randomColor from "randomcolor";
+import { useState } from "react";
 
 const App = () => {
+  const [color, setColor] = useState(randomColor());
+
+  const handleRefresh = () => {
+    setColor(randomColor());
+  };
+
   return (
     <>
-      <ColorPicker color={randomColor()}></ColorPicker>
+      <ColorPicker color={color} refresh={handleRefresh}></ColorPicker>
     </>
   );
 };

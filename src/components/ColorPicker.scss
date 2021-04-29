@@ -46,10 +46,13 @@ h1 {
   visibility: visible;
 }
 
-button {
-  margin-top: 30px;
-  border-radius: 50px;
+.btn-dark {
   font-size: 50px;
-  padding: 0px 50px;
-  background-color: white;
+  padding: 2px 40px;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+.btn-light {
+  font-size: 20px;
+  margin-top: 20px;
 }
