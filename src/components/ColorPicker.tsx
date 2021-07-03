@@ -5,11 +5,9 @@ import Button from "react-bootstrap/Button";
 
 interface ColorProps {
   color: string;
-  refresh: any;
+  refresh: () => void;
 }
-/*
- TODO create another button to regenerate color
-*/
+
 export const ColorPicker: FC<ColorProps> = (props: ColorProps) => {
   const COLOR = props.color.toUpperCase();
 
